@@ -1,3 +1,6 @@
 const express = require("express");
+const app = express();
 
-console.log("Olá express");
+app.listen(8000, () => {
+    console.log("Rodando");
+})
