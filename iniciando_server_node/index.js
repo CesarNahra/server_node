@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
+const port = 3000;
 
-app.listen(8000, () => {
-    console.log("Rodando");
+app.get("/", (req, res) => {
+    console.log("Hello World");
 })
+
+app.listen(port, () => {
+    console.log(`App rodando na porta ${port}`);
+});
