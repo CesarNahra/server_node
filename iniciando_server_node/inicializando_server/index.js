@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+
 app.get("/names/:name", (req, res) => {
     const name = req.params.name;
     console.log(`Rota de API criada pelo(a): ${name}`);
