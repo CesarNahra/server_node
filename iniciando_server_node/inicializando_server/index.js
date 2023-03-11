@@ -1,8 +1,14 @@
+const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
 const port = 3000;
 
-app.use(express.json());
+app.use(bodyParser.json());
+
+app.post("/objeto", (req, res) => {
+    const objeto = req.body;
+    res.json(objeto);
+})
 
 app.get("/names/:name", (req, res) => {
     const name = req.params.name;
